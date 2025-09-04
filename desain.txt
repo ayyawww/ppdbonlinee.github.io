@@ -1,0 +1,128 @@
+Berikut adalah desain aplikasi PPDB Online SMPN 1 Banjarnegara menggunakan PHP dan MySQL, dengan nama database ppdbonline. Desain ini meliputi struktur halaman frontend dan backend, fitur-fitur utama, serta alur sistem yang terstruktur. Penjelasan ini tidak mencantumkan script PHP dan query SQL, hanya narasi desain dan fitur.
+
+🏫 Nama Aplikasi: PPDB Online SMPN 1 Banjarnegara
+🎯 Tujuan:
+Memfasilitasi proses pendaftaran peserta didik baru secara online, mempermudah verifikasi, seleksi, dan pengumuman hasil seleksi oleh admin sekolah.
+
+🧱 STRUKTUR DATABASE
+Nama database: ppdbonline
+Tabel utama:
+    • calon_siswa
+    • berkas
+    • nilai
+    • pengumuman
+    • admin
+    • jalur_pendaftaran
+    • jurnal_pendaftar
+
+🌐 FRONTEND – Untuk Pendaftar
+1. Halaman Beranda
+    • Informasi umum PPDB
+    • Jadwal penting
+    • Persyaratan pendaftaran
+    • Jalur pendaftaran yang tersedia
+    • Link ke halaman pendaftaran dan pengumuman
+
+2. Halaman Pendaftaran
+Formulir pengisian data oleh calon siswa:
+Data yang dikumpulkan:
+    • Nama lengkap
+    • NISN
+    • Tempat, tanggal lahir
+    • Alamat lengkap
+    • Asal sekolah
+    • Nomor telepon/HP
+    • Email
+    • Nomor Induk Kependudukan (NIK)
+    • Jalur pendaftaran:
+        ◦ Prestasi (Akademik, Nilai Rapot, Non-Akademik Juara Lomba)
+        ◦ Afirmasi (Melampirkan bukti kepemilikan KIP)
+    • Nilai rata-rata rapor (semester 4–5)
+    • Upload dokumen:
+        ◦ Kartu Keluarga
+        ◦ Akta Kelahiran
+        ◦ Ijazah / Surat Keterangan Lulus
+        ◦ Scan KIP (jika jalur afirmasi)
+        ◦ Sertifikat lomba (jika prestasi)
+        ◦ Raport
+Output:
+    • Nomor pendaftaran unik otomatis setelah berhasil daftar
+    • Bukti pendaftaran dalam bentuk PDF (dapat diunduh)
+
+3. Halaman Cek Pengumuman
+User memasukkan:
+    • Nomor pendaftaran
+    • Jalur pendaftaran yang diikuti
+Output:
+    • Status: Diterima / Ditolak
+    • Jika diterima → informasi jadwal daftar ulang
+    • Jika ditolak → alasan penolakan (opsional)
+
+🔐 BACKEND – Untuk Admin
+Login Admin
+    • Username & Password
+    • Akses hanya untuk admin yang terdaftar di tabel admin
+
+1. Dashboard
+Menampilkan statistik ringkas:
+    • Total pendaftar
+    • Pendaftar per jalur
+    • Jumlah siswa diterima / ditolak
+    • Grafik jumlah pendaftar per hari
+
+2. Manajemen Pendaftar
+Menampilkan daftar semua calon siswa:
+    • Filter berdasarkan:
+        ◦ Jalur pendaftaran
+        ◦ Status (diterima / ditolak / belum diverifikasi)
+        ◦ Asal sekolah
+        ◦ Urutan nilai
+Fitur:
+    • Lihat detail biodata dan dokumen
+    • Verifikasi berkas manual
+    • Input atau edit nilai seleksi
+    • Menentukan status:
+        ◦ Terima
+        ◦ Tolak
+    • Tambahkan catatan jika ditolak
+
+3. Pengelolaan Jalur Pendaftaran
+Admin dapat:
+    • Menambah / menghapus jenis jalur pendaftaran
+    • Menentukan bobot nilai atau kriteria tiap jalur
+
+4. Jurnal Pendaftar Berdasarkan Ranking
+    • Menampilkan daftar calon siswa berdasarkan ranking nilai tertinggi hingga terendah
+    • Dapat difilter berdasarkan jalur
+    • Bisa diekspor ke Excel/PDF
+
+5. Pengumuman Otomatis
+    • Sistem menentukan penerimaan berdasarkan kuota & peringkat
+    • Admin bisa:
+        ◦ Menyetujui hasil pengumuman akhir
+        ◦ Menjadwalkan tanggal pengumuman tayang di frontend
+
+6. Manajemen Admin
+    • Tambah / hapus akun admin
+    • Ganti password admin
+
+📊 Alur Proses:
+    1. Calon siswa mendaftar via form pendaftaran online
+    2. Data masuk ke database ppdbonline
+    3. Admin verifikasi data dan nilai berdasarkan jalur pendaftaran
+    4. Admin menentukan hasil seleksi (manual atau semi-otomatis via ranking)
+    5. Pengumuman dibuka di frontend pada waktu yang ditentukan
+    6. Calon siswa cek hasil dengan memasukkan nomor pendaftaran dan jalur
+    7. Jurnal pendaftar disusun berdasarkan ranking nilai
+
+📱 Responsif
+Semua halaman frontend dan backend didesain responsif (mobile-friendly) agar dapat diakses baik dari smartphone, tablet, maupun desktop.
+
+🎨 Tampilan UI/UX (naratif)
+    • Warna dominan: Biru sekolah dan putih
+    • Navigasi frontend:
+        ◦ Beranda | Pendaftaran | Cek Pengumuman | Kontak
+    • Navigasi backend:
+        ◦ Dashboard | Pendaftar | Jalur | Pengumuman | Jurnal | Admin
+
+Jika kamu ingin, saya juga bisa bantu membuat wireframe skematik dari halaman-halaman tersebut secara visual. Mau saya buatkan?

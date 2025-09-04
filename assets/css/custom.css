@@ -1,0 +1,130 @@
+/* Earth Tone Light Mode Theme */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@700&display=swap');
+
+:root {
+    --background-light: #ffffff;
+    --font-dark-brown: #5D4037;
+    --font-light: #ffffff;
+    --accent-brown: #8D6E63; /* A slightly richer brown for accents */
+    --accent-brown-hover: #6D4C41;
+    --border-color: #e0e0e0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background-light);
+    color: var(--font-dark-brown);
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--background-light) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--font-dark-brown) !important;
+}
+
+.nav-link {
+    color: #616161 !important; /* Muted gray for non-active links */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--accent-brown-hover) !important;
+}
+
+/* Jumbotron / Hero Section */
+.jumbotron {
+    padding: 7rem 2rem;
+    background-color: transparent;
+    text-align: center;
+    border-bottom: none;
+}
+
+.jumbotron h1 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 4.2rem;
+    color: var(--font-dark-brown);
+}
+
+.jumbotron .lead {
+    font-weight: 400;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 1rem auto 2rem auto;
+    color: #757575;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--accent-brown);
+    border-color: var(--accent-brown);
+    color: var(--font-light);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-brown-hover);
+    border-color: var(--accent-brown-hover);
+    color: var(--font-light);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Cards */
+.info-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    background-color: var(--background-light);
+    height: 100%;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-color: var(--accent-brown);
+}
+
+.card-icon {
+    font-size: 3rem;
+    text-align: center;
+    color: var(--accent-brown);
+}
+
+.card-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--font-dark-brown);
+}
+
+/* Section Titles */
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--font-dark-brown);
+}
+
+/* Footer */
+footer {
+    background-color: #f5f5f5 !important;
+    border-top: 1px solid var(--border-color);
+    color: #757575;
+}
+
+footer .text-center {
+    background-color: transparent !important;
+}
